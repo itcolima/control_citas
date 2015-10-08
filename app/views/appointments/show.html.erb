@@ -1,0 +1,19 @@
+
+<p>
+  <strong>Hora de Inicio:</strong>
+  <%= @appointment.starttime %>
+</p>
+
+<p>
+  <strong>Hora de fin:</strong>
+  <%= @appointment.endtime %>
+</p>
+
+<p>
+  <strong>Fecha:</strong>
+  <%= @appointment.date %>
+</p>
+
+<%= link_to 'Back', appointments_path %>
+
+<%= link_to 'Edit', edit_appointments_path(@appointment) %>

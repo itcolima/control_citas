@@ -1,0 +1,41 @@
+<div class="container">
+
+<h1 class="text-success">Lista de citas</h1>
+ 
+<div class="table-responsive">
+    <table class="table  table-hover table-condensed">
+        
+  <thead>
+
+  <tr class="active">
+    <th>Hora de Inicio</th>
+    <th>Hora de Fin</th>
+    <th>Fecha</th>
+  </tr>
+ </thead>
+ <tbody>
+   <% @appointments.each do |appointment| %>
+    <tr class="success text-verdana">
+      <td><%= appointment.starttime %></td>
+      <td><%= appointment.endtime %></td>
+      <td><%= appointment.date %></td>
+
+      <td><%= link_to 'Ver', appointment_path(appointment) %></td>
+    <td><%= link_to 'Modificar', edit_appointment_path(appointment) %></td>
+    <td><%= link_to 'Eliminar', appointment_path(appointment),
+                    method: :delete, data: { confirm: 'Esta seguro de eliminar la cita?' } %></td>
+    </tr>
+  <% end %>
+
+
+ </tbody>
+
+
+
+    </table>
+
+  </div>
+</div>
+
+
+<%= link_to 'Nueva Cita', new_appointment_path %>
