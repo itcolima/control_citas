@@ -1,0 +1,43 @@
+<div class="container">
+
+<h1 class="text-success">Lista de servicios</h1>
+ 
+<div class="table-responsive">
+    <table class="table  table-hover table-condensed">
+        
+  <thead>
+
+  <tr class="active">
+    <th>Nombre</th>
+    <th>Descripcion</th>
+    <th>Duracion</th>
+    <th>Precio</th>
+  </tr>
+ </thead>
+ <tbody>
+   <% @services.each do |service| %>
+    <tr class="success text-verdana">
+      <td><%= service.name %></td>
+      <td><%= service.description %></td>
+      <td><%= service.duration %></td>
+      <td><%= service.price %></td>
+
+      <td><%= link_to 'Ver', service_path(service) %></td>
+    <td><%= link_to 'Modificar', edit_service_path(service) %></td>
+    <td><%= link_to 'Eliminar', service_path(service),
+                    method: :delete, data: { confirm: 'Esta seguro de eliminar el servicio?' } %></td>
+    </tr>
+  <% end %>
+
+
+ </tbody>
+
+
+
+    </table>
+
+  </div>
+</div>
+
+
+<%= link_to 'Nuevo Servicio', new_service_path %>
