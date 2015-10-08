@@ -1,0 +1,53 @@
+
+
+/* ==========================================================================
+   Author's custom styles
+   ========================================================================== */
+
+
+
+   body{
+   	font-size: 16px;
+      background-color:#33b5e5;
+   }
+
+   .app{
+   	font-size: 50px;
+   }
+
+   .color1{
+   	color:;
+      background-color: black;
+   }
+   .color2{
+   	color:#ff4444;
+      background-color: blue;
+   }
+   .color3{
+   	color:#2ecc71;
+   }
+   .color4{
+   	color:#8e44ad;
+   }
+.color5{
+	color:#f39c12;
+}
+
+/* Este es para controlar la altura del scrollspy de  la pagina tabs.html */
+
+.contenido-scrollspy{
+   overflow-y:scroll; 
+   height: 550px;
+
+}
+
+
+
+
+
+
+
+
+
+
+

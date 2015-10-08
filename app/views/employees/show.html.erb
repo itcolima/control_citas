@@ -1,0 +1,19 @@
+
+<p>
+  <strong>name:</strong>
+  <%= @employee.name %>
+</p>
+
+<p>
+  <strong>salary:</strong>
+  <%= @employee.salary %>
+</p>
+
+<p>
+  <strong>phone:</strong>
+  <%= @employee.phone %>
+</p>
+
+<%= link_to 'Back', employees_path %>
+
+<%= link_to 'Edit', edit_employee_path(@employee) %>

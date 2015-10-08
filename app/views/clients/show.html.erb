@@ -1,0 +1,19 @@
+
+<p>
+  <strong>name:</strong>
+  <%= @client.name %>
+</p>
+
+<p>
+  <strong>fecha de nacimiento:</strong>
+  <%= @client.birthday %>
+</p>
+
+<p>
+  <strong>Telefono:</strong>
+  <%= @client.phone %>
+</p>
+
+<%= link_to 'Back', clients_path %>
+
+<%= link_to 'Edit', edit_clients_path(@client) %>
