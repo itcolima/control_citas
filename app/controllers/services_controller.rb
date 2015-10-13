@@ -1,11 +1,10 @@
 class ServicesController < ApplicationController
-
 def new
     @service = Service.new
   end
  ##############################################
   def create
-  	@service = Service.new(employee_params)
+  	@service = Service.new(service_params)
  
     if @service.save
       redirect_to @service
@@ -40,14 +39,13 @@ def destroy
   @service = Service.find(params[:id])
   @service.destroy
  
-  redirect_to employees_path
+  redirect_to services_path
 end
 #######################################################
  private
   def service_params
-    params.require(:service).permit(:name, :salary, :phone)
+    params.require(:service).permit(:name, :description, :duration, :price)
   end
-
 
 
 end

@@ -1,6 +1,6 @@
 <div class="container">
 
-<h1 class="text-success">Lista de clientes</h1>
+<h1 class="text-success">Lista de empleados</h1>
  
 <div class="table-responsive">
     <table class="table  table-hover table-condensed">
@@ -9,21 +9,21 @@
 
   <tr class="active">
     <th>Nombre</th>
-    <th>Cumpleaños</th>
+    <th>Salario</th>
     <th>Telefono</th>
   </tr>
  </thead>
  <tbody>
-   <% @clients.each do |client| %>
+   <% @employees.each do |employee| %>
     <tr class="success text-verdana">
-      <td><%= client.name %></td>
-      <td><%= client.salary %></td>
-      <td><%= client.phone %></td>
+      <td><%= employee.name %></td>
+      <td><%= employee.salary %></td>
+      <td><%= employee.phone %></td>
 
-      <td><%= link_to 'Ver', client_path(client) %></td>
-    <td><%= link_to 'Modificar', edit_client_path(client) %></td>
-    <td><%= link_to 'Eliminar', client_path(client),
-                    method: :delete, data: { confirm: 'Esta seguro de eliminar el cliente?' } %></td>
+      <td><%= link_to 'Ver', employee_path(employee) %></td>
+    <td><%= link_to 'Modificar', edit_employee_path(employee) %></td>
+    <td><%= link_to 'Eliminar', employee_path(employee),
+                    method: :delete, data: { confirm: 'Esta seguro de eliminar empleado?' } %></td>
     </tr>
   <% end %>
 
@@ -38,4 +38,4 @@
 </div>
 
 
-<%= link_to 'Nuevo Empleado', new_client_path %>
+<%= link_to 'Nuevo Empleado', new_employee_path %>
