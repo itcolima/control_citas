@@ -1,0 +1,41 @@
+<div class="container">
+
+<h1 class="text-success">Lista de proveedores</h1>
+ 
+<div class="table-responsive">
+    <table class="table  table-hover table-condensed">
+        
+  <thead>
+
+  <tr class="active">
+    <th>Nombre</th>
+    <th>Telefono</th>
+    <th>Email</th>
+  </tr>
+ </thead>
+ <tbody>
+   <% @providers.each do |provider| %>
+    <tr class="success text-verdana">
+      <td><%= provider.starttime %></td>
+      <td><%= provider.endtime %></td>
+      <td><%= provider.date %></td>
+
+      <td><%= link_to 'Ver', provider_path(provider) %></td>
+    <td><%= link_to 'Modificar', edit_provider_path(provider) %></td>
+    <td><%= link_to 'Eliminar', provider_path(provider),
+                    method: :delete, data: { confirm: 'Esta seguro de eliminar al proveedor?' } %></td>
+    </tr>
+  <% end %>
+
+
+ </tbody>
+
+
+
+    </table>
+
+  </div>
+</div>
+
+
+<%= link_to 'Nueva Cita', new_provider_path %>

@@ -8,7 +8,11 @@ Rails.application.routes.draw do
   resources :employees
   resources :clients
   resources :appointments
+<<<<<<< HEAD
+  resources :providers
+=======
   resources  :services
+>>>>>>> origin/master
   root 'welcome#index'
 
   # Example of regular route:

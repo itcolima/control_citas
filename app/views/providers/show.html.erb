@@ -1,0 +1,19 @@
+
+<p>
+  <strong>Nombre:</strong>
+  <%= @provider.name %>
+</p>
+
+<p>
+  <strong>Telefono:</strong>
+  <%= @provider.phone %>
+</p>
+
+<p>
+  <strong>Email:</strong>
+  <%= @provider.email %>
+</p>
+
+<%= link_to 'Back', providers_path %>
+
+<%= link_to 'Edit', edit_providers_path(@provider) %>
