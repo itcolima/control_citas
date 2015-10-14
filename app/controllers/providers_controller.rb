@@ -29,7 +29,7 @@ class ProvidersController < ApplicationController
 	def update
 		@provider = Provider.find(params[:id])
 	 
-		if @provider.update(client_params)
+		if @provider.update(provider_params)
 	    	redirect_to @provider
 		else
 			render 'edit'
