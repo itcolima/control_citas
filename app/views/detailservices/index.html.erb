@@ -1,0 +1,38 @@
+
+<div class="container">
+
+<h1 class="text-success">Lista de detalles de servicios</h1>
+ 
+<div class="table-responsive">
+    <table class="table  table-hover table-condensed">
+        
+  <thead>
+
+  <tr class="active">
+    <th>Precio</th>
+     </tr>
+ </thead>
+ <tbody>
+   <% @detailservices.each do |detailservice| %>
+    <tr class="success text-verdana">
+      <td><%= detailservice.price %></td>
+      
+      <td><%= link_to 'Ver', detailservice_path(detailservice) %></td>
+    <td><%= link_to 'Modificar', edit_detailservice_path(detailservice) %></td>
+    <td><%= link_to 'Eliminar', detailservice_path(detailservice),
+                    method: :delete, data: { confirm: 'Esta seguro de eliminar el detalle de servicios?' } %></td>
+    </tr>
+  <% end %>
+
+
+ </tbody>
+
+
+
+    </table>
+
+  </div>
+</div>
+
+
+<%= link_to 'Nuevo detalle de servicio', new_detailservice_path %>

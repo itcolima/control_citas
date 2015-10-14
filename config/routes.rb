@@ -12,6 +12,7 @@ Rails.application.routes.draw do
   resources :providers
   resources :products
   resources :orders
+  resources :detailservices
   
   root 'welcome#index'
 
