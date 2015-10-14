@@ -1,0 +1,17 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  name: MyString
+  description: MyString
+  cost: 1.5
+  existence: 1.5
+  price: 1.5
+  minstock: 1.5
+
+two:
+  name: MyString
+  description: MyString
+  cost: 1.5
+  existence: 1.5
+  price: 1.5
+  minstock: 1.5

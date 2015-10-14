@@ -10,6 +10,7 @@ Rails.application.routes.draw do
   resources :services
   resources :appointments
   resources :providers
+  resources :products
   
   root 'welcome#index'
 
