@@ -19,7 +19,7 @@ class ClientsController < ApplicationController
   end
 #########################################
   def index
-  @client = Client.all
+  @clients = Client.all
   end
 #############################
 def edit
