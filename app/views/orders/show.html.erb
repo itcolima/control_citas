@@ -1,0 +1,24 @@
+
+<p>
+  <strong>amount:</strong>
+  <%= @order.amount %>
+</p>
+
+<p>
+  <strong>discount:</strong>
+  <%= @order.discount %>
+</p>
+
+<p>
+  <strong>date:</strong>
+  <%= @order.date %>
+</p>
+
+<p>
+  <strong>total:</strong>
+  <%= @order.total %>
+</p>
+
+<%= link_to 'Back', orders_path %>
+
+<%= link_to 'Edit', edit_order_path(@order) %>
