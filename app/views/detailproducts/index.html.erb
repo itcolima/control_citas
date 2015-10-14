@@ -1,0 +1,40 @@
+
+<div class="container">
+
+<h1 class="text-success">Lista de detalles de productos</h1>
+ 
+<div class="table-responsive">
+    <table class="table  table-hover table-condensed">
+        
+  <thead>
+
+  <tr class="active">
+    <th>Precio</th>
+    <th>Cantidad</th>
+    
+     </tr>
+ </thead>
+ <tbody>
+   <% @detailproducts.each do |detailproduct| %>
+    <tr class="success text-verdana">
+      <td><%= detailproduct.price %></td>
+      
+      <td><%= link_to 'Ver', detailproduct_path(detailproduct) %></td>
+    <td><%= link_to 'Modificar', edit_detailproduct_path(detailproduct) %></td>
+    <td><%= link_to 'Eliminar', detailproduct_path(detailproduct),
+                    method: :delete, data: { confirm: 'Esta seguro de eliminar el detalle de productos?' } %></td>
+    </tr>
+  <% end %>
+
+
+ </tbody>
+
+
+
+    </table>
+
+  </div>
+</div>
+
+
+<%= link_to 'Nuevo detalle de producto', new_detailproduct_path %>
