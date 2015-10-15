@@ -9,15 +9,20 @@
   <thead>
 
   <tr class="active">
+    <th>Id_Cita</th>
+    <th>Id_cliente</th>
     <th>Importe</th>
     <th>Descuento</th>
     <th>Fecha</th>
     <th>Total</th>
+
   </tr>
  </thead>
  <tbody>
    <% @orders.each do |order| %>
     <tr class="success text-verdana">
+      <td><%= order.idappoiment %></td>
+      <td><%= order.idclient %></td>
       <td><%= order.amount %></td>
       <td><%= order.discount %></td>
       <td><%= order.date %></td>

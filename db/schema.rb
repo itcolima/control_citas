@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20151014191552) do
+ActiveRecord::Schema.define(version: 20151015180545) do
 
   create_table "appointments", force: :cascade do |t|
     t.time     "starttime"
@@ -55,8 +55,10 @@ ActiveRecord::Schema.define(version: 20151014191552) do
     t.float    "discount"
     t.date     "date"
     t.float    "total"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
+    t.datetime "created_at",  null: false
+    t.datetime "updated_at",  null: false
+    t.integer  "idappoiment"
+    t.integer  "idclient"
   end
 
   create_table "products", force: :cascade do |t|

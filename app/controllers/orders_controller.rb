@@ -45,6 +45,6 @@ end
 #######################################################
  private
   def order_params
-    params.require(:order).permit(:amount, :discount, :date, :total)
+    params.require(:order).permit(:idappoiment, :idclient, :amount, :discount, :date, :total)
   end
 end
