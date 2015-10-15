@@ -45,7 +45,7 @@ end
 #######################################################
  private
   def product_params
-    params.require(:product).permit(:name, :description, :cost, :existence, :price, :minstock)
+    params.require(:product).permit(:idprovider, :name, :description, :cost, :existence, :price, :minstock)
   end
 
 

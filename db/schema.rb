@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20151015201414) do
+ActiveRecord::Schema.define(version: 20151015202542) do
 
   create_table "appointments", force: :cascade do |t|
     t.time     "starttime"
@@ -75,6 +75,7 @@ ActiveRecord::Schema.define(version: 20151015201414) do
     t.float    "minstock"
     t.datetime "created_at",  null: false
     t.datetime "updated_at",  null: false
+    t.integer  "idprovider"
   end
 
   create_table "providers", force: :cascade do |t|
