@@ -1,3 +1,3 @@
 class Detailproduct < ActiveRecord::Base
-	 validates :price, :quantity, presence: true
+	 validates :idorder, :idproduct, :price, :quantity, presence: true
 end

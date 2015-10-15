@@ -9,6 +9,8 @@
   <thead>
 
   <tr class="active">
+    <th>Id_orden</th>
+    <th>Id_producto</th>
     <th>Precio</th>
     <th>Cantidad</th>
     
@@ -17,7 +19,11 @@
  <tbody>
    <% @detailproducts.each do |detailproduct| %>
     <tr class="success text-verdana">
+      
+      <td><%= detailproduct.idorder %></td>
+      <td><%= detailproduct.idproduct %></td>
       <td><%= detailproduct.price %></td>
+      <td><%= detailproduct.quantity %></td>
       
       <td><%= link_to 'Ver', detailproduct_path(detailproduct) %></td>
     <td><%= link_to 'Modificar', edit_detailproduct_path(detailproduct) %></td>
