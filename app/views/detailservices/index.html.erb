@@ -9,12 +9,19 @@
   <thead>
 
   <tr class="active">
+    <th>Id_empleado</th>
+    <th>Id_orden</th>
+    <th>Id_service</th>
     <th>Precio</th>
      </tr>
  </thead>
  <tbody>
    <% @detailservices.each do |detailservice| %>
     <tr class="success text-verdana">
+      
+      <td><%= detailservice.idemployee %></td>
+      <td><%= detailservice.idorder %></td>
+      <td><%= detailservice.idservice %></td>
       <td><%= detailservice.price %></td>
       
       <td><%= link_to 'Ver', detailservice_path(detailservice) %></td>

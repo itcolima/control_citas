@@ -45,7 +45,7 @@ end
 #######################################################
  private
   def detailservice_params
-    params.require(:detailservice).permit(:price)
+    params.require(:detailservice).permit(:idemployee, :idorder, :idservice, :price)
   end
 
 end

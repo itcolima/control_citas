@@ -49137,3 +49137,20 @@ Migrating to AddIdclientToOrder (20151015180545)
   [1m[35mSQL (0.0ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES (?)  [["version", "20151015180545"]]
   [1m[36m (108.6ms)[0m  [1mcommit transaction[0m
   [1m[35mActiveRecord::SchemaMigration Load (1.0ms)[0m  SELECT "schema_migrations".* FROM "schema_migrations"
+  [1m[36mActiveRecord::SchemaMigration Load (1.0ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Migrating to AddIdemployeeToDetailservice (20151015182713)
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36m (2.0ms)[0m  [1mALTER TABLE "detailservices" ADD "idemployee" integer[0m
+  [1m[35mSQL (0.0ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES (?)  [["version", "20151015182713"]]
+  [1m[36m (124.1ms)[0m  [1mcommit transaction[0m
+Migrating to AddIdorderToDetailservice (20151015182830)
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36m (1.0ms)[0m  [1mALTER TABLE "detailservices" ADD "idorder" integer[0m
+  [1m[35mSQL (1.0ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES (?)  [["version", "20151015182830"]]
+  [1m[36m (143.8ms)[0m  [1mcommit transaction[0m
+Migrating to AddIdserviceToDetailservice (20151015182957)
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36m (1.0ms)[0m  [1mALTER TABLE "detailservices" ADD "idservice" integer[0m
+  [1m[35mSQL (0.0ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES (?)  [["version", "20151015182957"]]
+  [1m[36m (85.8ms)[0m  [1mcommit transaction[0m
+  [1m[35mActiveRecord::SchemaMigration Load (0.0ms)[0m  SELECT "schema_migrations".* FROM "schema_migrations"

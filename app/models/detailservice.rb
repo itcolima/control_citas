@@ -1,4 +1,4 @@
 class Detailservice < ActiveRecord::Base
 
-	 validates :price, presence: true
+	 validates :idemployee, :idorder, :idservice, :price, presence: true
 end
